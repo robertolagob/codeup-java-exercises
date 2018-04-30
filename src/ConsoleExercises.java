@@ -9,31 +9,33 @@ public class ConsoleExercises {
         int userInput=ls.nextInt();
         ls.nextLine();
         System.out.println(userInput);
+
         System.out.println("enter the fist word");
-        String pal1;
-        pal1  =ls.nextLine() ;
-        System.out.println("enter the second word");
-        String pal2 ;
-        pal2=ls.nextLine() ;
-        System.out.println("enter the third word");
-        String pal3=ls.nextLine()  ;
-        System.out.println(pal1);
-        System.out.println(pal2);
-        System.out.println(pal3);
+        String pal1=ls.next();
+        String pal2=ls.next();
+        String pal3=ls.next()  ;
+        System.out.println(pal1+pal2+pal3);
+
         ls.nextLine();
+
         System.out.println("enter a sentence");
         String sentence=ls.nextLine();
         System.out.println(sentence);
+
         System.out.println("let's calculate the classroom perimeter!!");
         System.out.println("enter the length");
-        float largo=ls.nextInt();
+        String stringlargo=ls.next();
+        double largo=Double.parseDouble(stringlargo);
         System.out.println("enter the width");
-        float ancho=(float)ls.nextInt();
-        float perimeter=(largo*2)+(ancho*2);
-        float area=largo*ancho;
+        String stringancho=ls.next();
+        double ancho=Double.parseDouble(stringancho);
+        double perimeter=(largo*2)+(ancho*2);
+        double area=largo*ancho;
         System.out.println("the perimeter is "+perimeter);
         System.out.println("the area is "+ area);
-        boolean esta=true;
+
 
     }
+
+
 }
