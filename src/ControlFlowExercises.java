@@ -6,37 +6,27 @@ public class ControlFlowExercises {
 
         Scanner sc=new Scanner(System.in);
 
-        System.out.println("Enter a integer number");
-        int numero=sc.nextInt();
+        System.out.println("Enter a grade between 0 and 100");
+        int grade=sc.nextInt();
 
-        System.out.println("do you wanna see a secuence of squares and cubes from 1 to your entered number? Y/N");
-        String approval=sc.next();
+        if(grade>0&&grade<=59){
 
-        if(approval.equalsIgnoreCase("y")){
-            System.out.println("Here is your table");
-
-            System.out.println("number | squared | cubed");
-            System.out.println("_______|_________|_______");
-
-            for (int i=1;i<=numero;i++)
-            {
-
-                int sqr=(i*i);
-                int cubed=sqr*i;
-                String linea=String.format("%-7s", i)+String.format("%-10s", "|"+sqr)+"|"+cubed;
-//                System.out.println(i+"      |"+sqr+"       |"+cubed+"     |");
-                System.out.println(linea);
-
-            }
-
+            System.out.println("C: 59-0");
         }
-        else if(approval.equalsIgnoreCase("N")){
-            System.out.println("Have a good one");
+        else if ((grade>=60&&grade<66)){
+
+            System.out.println("D: 66-60");
         }
-        else {
-            System.out.println("You entered a wrong input");
-            sc.nextLine();
+        else if ((grade<=79&&grade>67)){
+            System.out.println("C: 79-67");
         }
+        else if ((grade<=87&&grade>79)){
+            System.out.println("C: 87-79");
+        }
+        else if ((grade<=100&&grade>88)){
+            System.out.println("A: 100-88");
+        }
+
 
 
     }
