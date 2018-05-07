@@ -27,6 +27,10 @@ public class ControlFlowExercises {
             System.out.println("A: 100-88");
         }
 
+        else if(grade==0){
+            System.out.println("hey");
+        }
+
 
 
     }
