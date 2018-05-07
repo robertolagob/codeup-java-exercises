@@ -31,7 +31,6 @@ public class HighLow {
                     System.out.println("lower");
                     counter++;
                 }
-
                 if (counter >= 20) {
                     System.out.println("you have reached the max number of intent ...let's do this again");
                     myApplication();
