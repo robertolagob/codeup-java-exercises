@@ -1,53 +1,44 @@
 package util;
 import java.util.Scanner;
 
-public class Input {
+    public class Input {
+        // option 1) Inline the assignment
+        // private Scanner scanner = new Scanner(System.in);  // = null
+        private  Scanner scanner;
 
-   static private Scanner scanner;
-
-    public Input() {
-        scanner=new Scanner(System.in);
-    }
-
-    public static String getString()
-    {
-        return scanner.nextLine();
-    }
-
-    static public boolean yesNo(){
-        String will=scanner.nextLine();
-        if(will.equalsIgnoreCase("yes")||will.equalsIgnoreCase("y")) {
-            return true;
+        // option 2 -> Create a constructor
+        public Input() {
+            scanner = new Scanner(System.in);
         }
-        else {
-            return false;
+        public String getString() {
+            return scanner.nextLine();
+        }
+        boolean yesNo() {
+            String answer = scanner.nextLine();  // null
+            // auto-boxing => value (string) -> wrap it in a an object -> new String("y").equalsIgnoreCase()
+            return "y".equalsIgnoreCase(answer) || "yes".equalsIgnoreCase(answer);
+        }
+        int getInt(int min, int max) {
+            int value = getInt();
+            if (value < min || value > max) {
+                System.out.printf("Enter a number between %d and %d%n", min, max);
+                return getInt(min, max);
+            }
+            return value;
+        }
+        int getInt() {
+            return scanner.nextInt();
+        }
+        double getDouble(double min, double max) {
+            double value = getDouble();
+            if (value < min || value > max) {
+                System.out.printf("Enter a number between %f and %f%n", min, max);
+                return getDouble(min, max);
+            }
+            return value;
+        }
+        double getDouble() {
+            return scanner.nextDouble();
         }
     }
 
-//    static public int getInt(int min, int max){
-//        int myValue;
-//        do {
-//            System.out.println("enter a number between " + min + "and " + max);
-//            myValue = scanner.nextInt();
-//        }while (myValue<min||myValue>max);
-//
-//        return myValue;
-//    }
-//    int getInt(){
-//        return 0;
-//    }
-//    double getDouble(double min, double max){
-//        return 0.0;
-//    }
-//    double getDouble(){
-//        return 0;
-//    }
-
-    public static void main(String[] args) {
-
-       getString();
-
-    }
-
-
-}
