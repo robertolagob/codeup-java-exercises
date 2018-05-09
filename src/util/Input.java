@@ -4,7 +4,7 @@ import java.util.Scanner;
     public class Input {
         // option 1) Inline the assignment
         // private Scanner scanner = new Scanner(System.in);  // = null
-        private  Scanner scanner;
+        private  static Scanner scanner;
 
         // option 2 -> Create a constructor
         public Input() {
@@ -26,7 +26,7 @@ import java.util.Scanner;
             }
             return value;
         }
-        int getInt() {
+        static public int getInt() {
             return scanner.nextInt();
         }
         double getDouble(double min, double max) {
