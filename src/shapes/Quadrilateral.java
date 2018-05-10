@@ -24,13 +24,5 @@ public abstract class Quadrilateral extends Shape implements Measurable{
     public abstract void  setWith(double with);
 
 
-    public double getArea() {
-        return length*with;
-    }
-
-
-    public double getPerimeter() {
-        return 2*(with+length);
-    }
 }
 
