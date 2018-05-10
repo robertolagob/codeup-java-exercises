@@ -4,8 +4,7 @@ import java.util.Arrays;
 
 public class CardsArray {
 
-
-    //helper function that return a cards array with a single Suit and consecutive numeric value from 1 to 12
+    //helper function that return a cards array with a single Suit and consecutive numeric values from 1 to 12
 
     static public Card[] createCards(String suite){
         Card [] brand=new Card[13];
@@ -24,11 +23,10 @@ public class CardsArray {
         return temporal;
     }
 
-//function that return a fur Suit of 52 Cards set
+    //function that return a fur Suit of 52 Cards set
     static public Card[] cardsSet(){
         Card[] fullSet=new Card[0];
-        String[] suits={"Spade","Clove","Diamond","Heart"};
-
+        String[] suits={"Spades","Clubs","Diamonds","Hearts"};
         for (int i=0;i<4;i++){
             fullSet=addSuitCards(createCards(suits[i]),fullSet);
         }

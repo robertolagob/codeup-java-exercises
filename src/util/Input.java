@@ -10,15 +10,15 @@ import java.util.Scanner;
         public Input() {
             scanner = new Scanner(System.in);
         }
-        public String getString() {
+        static public String getString() {
             return scanner.nextLine();
         }
-        boolean yesNo() {
+        static public boolean yesNo() {
             String answer = scanner.nextLine();  // null
             // auto-boxing => value (string) -> wrap it in a an object -> new String("y").equalsIgnoreCase()
             return "y".equalsIgnoreCase(answer) || "yes".equalsIgnoreCase(answer);
         }
-        int getInt(int min, int max) {
+        static public int  getInt(int min, int max) {
             int value = getInt();
             if (value < min || value > max) {
                 System.out.printf("Enter a number between %d and %d%n", min, max);
@@ -29,7 +29,8 @@ import java.util.Scanner;
         static public int getInt() {
             return scanner.nextInt();
         }
-        double getDouble(double min, double max) {
+
+        static public double getDouble(double min, double max) {
             double value = getDouble();
             if (value < min || value > max) {
                 System.out.printf("Enter a number between %f and %f%n", min, max);
@@ -37,7 +38,7 @@ import java.util.Scanner;
             }
             return value;
         }
-        double getDouble() {
+        static public double getDouble() {
             return scanner.nextDouble();
         }
     }

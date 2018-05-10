@@ -1,26 +1,25 @@
-//package shapes;
-//
-//public class Rectangle extends Quadrilateral implements Measurable {
-//
-//
-//
-//    @Override
-//    public void setLength() {
-//
-//    }
-//
-//    @Override
-//    public void setWith() {
-//
-//    }
-//
-//    @Override
-//    public double getPerimeter() {
-//        return 0;
-//    }
-//
-//    @Override
-//    public double getArea() {
-//        return 0;
-//    }
-//}
+package shapes;
+
+public class Rectangle extends Quadrilateral implements Measurable {
+
+    public Rectangle(double length, double with) {
+        super(length, with);
+    }
+
+    public void setLength(double length) {
+        this.length=length;
+    }
+
+
+    public void setWith( double with) {
+        this.with=with;
+        }
+
+
+
+    }
+
+
+
+
+

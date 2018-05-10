@@ -1,8 +1,8 @@
 package shapes;
 
-public class Circle {
-    private static int circleCount = 0;
-    private double radius;
+public class Circle extends Shape implements Measurable{
+    private  int circleCount = 0;
+    private  double radius;
 
     public Circle(double radius) {
         this.radius = radius;
@@ -11,11 +11,11 @@ public class Circle {
     public double getArea() {
         return Math.PI * radius * radius;
     }
-    public double getCircumference() {
+    public double getPerimeter() {
         return Math.PI * 2 * radius;
     }
 
-    public static int getCircleCount() {
+    public int getCircleCount() {
         return circleCount;
     }
 }
