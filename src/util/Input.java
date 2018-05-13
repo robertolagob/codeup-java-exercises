@@ -4,7 +4,7 @@ import java.util.Scanner;
     public class Input {
         // option 1) Inline the assignment
         // private Scanner scanner = new Scanner(System.in);  // = null
-        private  static Scanner scanner;
+        private  static Scanner scanner=new Scanner(System.in);
 
         // option 2 -> Create a constructor
         public Input() {
